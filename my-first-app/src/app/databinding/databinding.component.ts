@@ -12,16 +12,14 @@ export class DatabindingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  inputValue="blank"
-  name = 'John Smith';
-  dob = 1997;
-  isAlert = this.dob < 2000;
-  isSelected = true;
-  angularLogoSrc=  'https://angular.io/assets/images/logos/angular/angular.svg';
-  getAge(){
-    return 2018-1997;
+  user: any = { name: 'blank', age: '18' };
+  onLogin() {
+    console.log('Name :', this.user.name );
+    console.log('Age', this.user.age );
   }
-  alertMsg(){
-    alert('Welcome to learn Angular-'+this.inputValue);
+
+  setLoginData() {
+    this.user.name = 'angular.com';
+    this.user.age = '4';
   }
 }
