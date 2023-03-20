@@ -1,5 +1,9 @@
 <p>databinding works!</p>
-<h1> {{ name }} </h1> <input (input)="inputValue=$event.target.value" />
+<p> {{ name }}</p>
+<p [innerHTML]="name"> </p>
+<h1> {{ name }} </h1> 
+
+<input (input)="inputValue=$event.target.value" />
 <p> Length: {{ name.length}} </p>
 <p> Age: {{getAge()}} </p>
 <p>{{ 55 + 45 }} </p>
