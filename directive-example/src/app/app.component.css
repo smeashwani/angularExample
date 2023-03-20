@@ -1,0 +1,14 @@
+.evencls{
+    background-color: cadetblue;
+}
+.oddcls{
+    background-color: darkgoldenrod;
+}
+
+.firstcls{
+    background-color: bisque;
+}
+
+.lastcls{
+    background-color: aqua;
+}
