@@ -1,35 +1,8 @@
-<table *ngIf="employee" border="1">
-  <thead>
-    <tr>
-      <th scope="col">Employee Id</th>
-      <th scope="col">Full Name</th>
-      <th scope="col">City</th>
-      <th scope="col">Experience</th>
-      <th scope="col">Salary</th>
-      <th scope="col">Married</th>
-    </tr>
-  </thead>
-<ng-container *ngFor="let data of employee; let even = even; let odd = odd;trackBy: gettrackby;" >
-    <tr class="evencls" *ngIf="even ==true; else oddtemplate">
-      <td>{{data.empid}}</td>
-      <td>{{data.fullname}}</td>
-      <td>{{data.city}}</td>
-      <td>{{data.experience}}</td>
-      <td>{{data.salary}}</td>
-      <td>{{data.married}}</td>
-    </tr>
-    <ng-template #oddtemplate>
-      <tr class="oddcls"  >
-        <td>{{data.empid}}</td>
-        <td>{{data.fullname}}</td>
-        <td>{{data.city}}</td>
-        <td>{{data.experience}}</td>
-        <td>{{data.salary}}</td>
-        <td>{{data.married}}</td>
-      </tr>
-    </ng-template>
-  </ng-container>
-
-  <button (click)="addEmployee()">Add Employee</button>
-  <button (click)="addExistngEmployee()">Add Employee Existing - 7458</button>
-  </table>
+<ul *ngFor="let data of employee" [ngSwitch]="data.city">
+  <li *ngSwitchCase="'Newyork'">{{data.city}}</li>
+  <li *ngSwitchCase="'london'">{{data.city}}</li>
+  <li *ngSwitchCase="'Dubai'">{{data.city}}</li>
+  <li *ngSwitchCase="'Tokyo'">{{data.city}}</li>
+  <li *ngSwitchCase="'Delhi'">{{data.city}}</li>
+  <li *ngSwitchDefault>{{data.city}}</li>
+</ul>
