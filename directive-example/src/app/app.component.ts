@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directive-example';
-  employeedata:any;
   employee = [{
     empid: 5623,
     fullname: "Stephen",
@@ -44,4 +43,29 @@ export class AppComponent {
     married: false,
     role: 'user'
   }];
+
+  gettrackby(empid:number,employees:any)
+ {
+    return employees.empid;
+ }
+
+ addEmployee(){
+   this.employee.push({ empid: 1234 + this.employee.length,
+    fullname: "stella",
+    city: "Paris",
+    experience: "4 years",
+    salary: 400000,
+    married: false,
+    role: 'user'});
+ }
+
+ addExistngEmployee(){
+  this.employee.push({ empid: 7458,
+   fullname: "stella",
+   city: "Paris",
+   experience: "4 years",
+   salary: 400000,
+   married: false,
+   role: 'user'});
+}
 }

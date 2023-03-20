@@ -9,7 +9,7 @@
       <th scope="col">Married</th>
     </tr>
   </thead>
-<ng-container *ngFor="let data of employee; let even = even; let odd = odd;" >
+<ng-container *ngFor="let data of employee; let even = even; let odd = odd;trackBy: gettrackby;" >
     <tr class="evencls" *ngIf="even ==true; else oddtemplate">
       <td>{{data.empid}}</td>
       <td>{{data.fullname}}</td>
@@ -30,25 +30,6 @@
     </ng-template>
   </ng-container>
 
-  <hr>
-  <ng-container *ngFor="let data of employee;let first = first; let last = last; let indexId = index" >
-    <tr class="firstcls" *ngIf="first ==true;">
-      <td>{{data.empid}}</td>
-      <td>{{data.fullname}}</td>
-      <td>{{data.city}}</td>
-      <td>{{data.experience}}</td>
-      <td>{{data.salary}}</td>
-      <td>{{data.married}}</td>
-      <td>{{indexId}}</td>
-    </tr>
-    <tr class="lastcls" *ngIf="last ==true;" >
-      <td>{{data.empid}}</td>
-      <td>{{data.fullname}}</td>
-      <td>{{data.city}}</td>
-      <td>{{data.experience}}</td>
-      <td>{{data.salary}}</td>
-      <td>{{data.married}}</td>
-      <td>{{indexId}}</td>
-    </tr>
-  </ng-container>
+  <button (click)="addEmployee()">Add Employee</button>
+  <button (click)="addExistngEmployee()">Add Employee Existing - 7458</button>
   </table>
