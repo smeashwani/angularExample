@@ -1,4 +1,4 @@
 <div class="container">
 <app-cockpit></app-cockpit>
-<app-server-element *ngFor="let element of serverElements"></app-server-element>
+<app-server-element *ngFor="let element of serverElements" [element]="element"></app-server-element>
 </div>
