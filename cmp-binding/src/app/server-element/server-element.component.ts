@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent implements OnInit {
- element :any = {};
+ element :any = {name:'', type:'', content:''};
   constructor() { }
 
   ngOnInit(): void {
