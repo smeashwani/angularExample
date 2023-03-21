@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
@@ -8,33 +8,37 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class CockpitComponent implements OnInit {
   @Output() serverCreated = new EventEmitter<{serverName: string, serverType: string,  serverContent:string}>();
   @Output('bpCreated') blueprintCreated = new EventEmitter<{serverName: string, serverType: string, serverContent:string}>();
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
-
-  serverElements : any = []  ;
+//resolve the initailzation error - tsconfig -  add    "strictPropertyInitialization": false,
+  serverElements : any = []  ;  
+  @ViewChild('serverNameInput') nameInput: ElementRef;
+  @ViewChild('serverContentInput') contentInput: ElementRef;
+  
   // newServerName : string = '';
   // newServerContent : string = '';
 
-  onAddServer(nameInput: HTMLInputElement, contentInput: HTMLInputElement) {
-    console.log(nameInput);
-    console.log(nameInput.value);
+  onAddServer() {
+    console.log(this.nameInput);
+    console.log(this.nameInput.nativeElement.value);
     this.serverCreated.emit(
       {
         serverType: 'server',
-        serverName: nameInput.value,
-        serverContent: contentInput.value
+        serverName: this.nameInput.nativeElement.value,
+        serverContent: this.contentInput.nativeElement.value
       }
     );
   }
 
-  onAddBlueprint(nameInput: HTMLInputElement, contentInput: HTMLInputElement) {
+  onAddBlueprint() {
     this.blueprintCreated.emit(
       {
         serverType: 'blueprint',
-        serverName: nameInput.value,
-        serverContent: contentInput.value
+        serverName: this.nameInput.nativeElement.value,
+        serverContent: this.contentInput.nativeElement.value
       }
     );
   }
