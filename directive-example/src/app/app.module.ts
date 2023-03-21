@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HighlighterDirective } from './highlighter.directive';
+import { MouseoverHighlighterDirective } from './mouseover-highlighter.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlighterDirective
+    HighlighterDirective,
+    MouseoverHighlighterDirective
   ],
   imports: [
     BrowserModule

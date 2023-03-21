@@ -1,8 +1,8 @@
 <ul *ngFor="let data of employee" [ngSwitch]="data.city">
-  <li appHighlighter *ngSwitchCase="'Newyork'">{{data.city}}</li>
-  <li appHighlighter *ngSwitchCase="'london'">{{data.city}}</li>
-  <li appHighlighter *ngSwitchCase="'Dubai'">{{data.city}}</li>
-  <li appHighlighter *ngSwitchCase="'Tokyo'">{{data.city}}</li>
-  <li appHighlighter *ngSwitchCase="'Delhi'">{{data.city}}</li>
-  <li appHighlighter *ngSwitchDefault>{{data.city}}</li>
+  <li appMouseoverHighlighter appHighlighter *ngSwitchCase="'Newyork'">{{data.city}}</li>
+  <li appMouseoverHighlighter appHighlighter *ngSwitchCase="'london'">{{data.city}}</li>
+  <li appMouseoverHighlighter appHighlighter *ngSwitchCase="'Dubai'">{{data.city}}</li>
+  <li appMouseoverHighlighter appHighlighter *ngSwitchCase="'Tokyo'">{{data.city}}</li>
+  <li appMouseoverHighlighter appHighlighter *ngSwitchCase="'Delhi'">{{data.city}}</li>
+  <li appMouseoverHighlighter appHighlighter *ngSwitchDefault>{{data.city}}</li>
 </ul>
