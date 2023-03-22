@@ -8,8 +8,9 @@
     <ul class="navbar-nav">
       <li class="nav-item active"> <a class="nav-link" routerLink="home" routerLinkActive="active">Home </a> </li>
       <li class="nav-item"><a class="nav-link" routerLink="aboutus" routerLinkActive="active"> About </a></li>
-      <li class="nav-item"> <a class="nav-link" routerLink="contactus" routerLinkActive="active">Contact Us</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="contactus" routerLinkActive="active">Contact Us</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="service" routerLinkActive="active">Service</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/details',10,'angular']" routerLinkActive="active">Details</a> </li>
       <li class="nav-item dropdown" id="myDropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" routerLink="angulartutorial" routerLinkActive="active">  Angular Tutorial  </a>
         <ul class="dropdown-menu">

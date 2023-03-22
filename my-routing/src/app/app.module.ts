@@ -14,6 +14,7 @@ import { FolderandstructureComponent } from './angulartutorial/folderandstructur
 import { DatabindingComponent } from './angulartutorial/databinding/databinding.component';
 import { LoginComponent } from './userdetail/login/login.component';
 import { RegistrationComponent } from './userdetail/registration/registration.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RegistrationComponent } from './userdetail/registration/registration.co
     FolderandstructureComponent,
     DatabindingComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

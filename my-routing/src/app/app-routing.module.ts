@@ -6,6 +6,7 @@ import { DatabindingComponent } from './angulartutorial/databinding/databinding.
 import { FolderandstructureComponent } from './angulartutorial/folderandstructure/folderandstructure.component';
 import { IntroductionComponent } from './angulartutorial/introduction/introduction.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { ServiceComponent } from './service/service.component';
 import { LoginComponent } from './userdetail/login/login.component';
@@ -58,6 +59,7 @@ const routes: Routes = [
     ]
   },
   // { path: '**', component: PagenotfoundComponent }
+  { path: 'details/:id/:name', component: DetailsComponent }
 ];
 
 @NgModule({
