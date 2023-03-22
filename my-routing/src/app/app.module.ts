@@ -7,6 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ServiceComponent } from './service/service.component';
+import { AngulartutorialComponent } from './angulartutorial/angulartutorial.component';
+import { UserdetailComponent } from './userdetail/userdetail.component';
+import { IntroductionComponent } from './angulartutorial/introduction/introduction.component';
+import { FolderandstructureComponent } from './angulartutorial/folderandstructure/folderandstructure.component';
+import { DatabindingComponent } from './angulartutorial/databinding/databinding.component';
+import { LoginComponent } from './userdetail/login/login.component';
+import { RegistrationComponent } from './userdetail/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +21,14 @@ import { ServiceComponent } from './service/service.component';
     HomeComponent,
     AboutusComponent,
     ContactusComponent,
-    ServiceComponent
+    ServiceComponent,
+    AngulartutorialComponent,
+    UserdetailComponent,
+    IntroductionComponent,
+    FolderandstructureComponent,
+    DatabindingComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
