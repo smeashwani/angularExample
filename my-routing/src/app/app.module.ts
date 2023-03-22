@@ -15,6 +15,7 @@ import { DatabindingComponent } from './angulartutorial/databinding/databinding.
 import { LoginComponent } from './userdetail/login/login.component';
 import { RegistrationComponent } from './userdetail/registration/registration.component';
 import { DetailsComponent } from './details/details.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DetailsComponent } from './details/details.component';
     DatabindingComponent,
     LoginComponent,
     RegistrationComponent,
-    DetailsComponent
+    DetailsComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

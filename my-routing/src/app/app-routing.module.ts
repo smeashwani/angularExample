@@ -8,6 +8,7 @@ import { IntroductionComponent } from './angulartutorial/introduction/introducti
 import { ContactusComponent } from './contactus/contactus.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ServiceComponent } from './service/service.component';
 import { LoginComponent } from './userdetail/login/login.component';
 import { RegistrationComponent } from './userdetail/registration/registration.component';
@@ -58,7 +59,10 @@ const routes: Routes = [
  
     ]
   },
-  // { path: '**', component: PagenotfoundComponent }
+  { path: 'pageNotFound', component: PagenotfoundComponent },
+  { path: 'something', redirectTo: 'pageNotFound' },
+  { path: '**', component: PagenotfoundComponent },
+  
   { path: 'details/:id/:name', component: DetailsComponent }
 ];
 
